@@ -5,7 +5,9 @@ export const Button = styled.button`
 	align-items: center;
 	justify-content: center;
 	gap: 0.5rem;
-	filter: drop-shadow(0.1rem 0.05rem 0.5rem black);
+
+	width: 90px;
+	height: 52px;
 
 	padding: 1rem;
 
@@ -17,7 +19,7 @@ export const Button = styled.button`
 
 	color: ${props => props.theme["white"]};
 
-	box-shadow: 2px 2px 3px #0d0d0d;
+	box-shadow: 0 4px 4px 4px rgba(0, 0, 0, 0.25);
 
 	&:hover {
 		background-color: ${props => props.theme["green-800"]};

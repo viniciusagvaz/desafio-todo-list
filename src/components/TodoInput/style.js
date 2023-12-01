@@ -6,7 +6,6 @@ export const InputConteiner = styled.div`
 	align-items: center;
 	gap: 0.5rem;
 	margin: 0 auto;
-
 	position: absolute;
 	top: 170px;
 	left: 0;
@@ -14,15 +13,15 @@ export const InputConteiner = styled.div`
 `;
 
 export const Input = styled.input`
-	max-width: 39.8rem;
-	padding: 1rem;
+	max-width: 39.875rem;
 	width: 100%;
-
+	height: 3.375rem;
+	color: #fff;
+	padding: 1rem;
 	background-color: ${props => props.theme["gray-500"]};
-  color: ${props => props.theme["white"]};
-  line-height: 140%;
-  border: none;
+	border: none;
 	border-radius: 8px;
+	box-shadow: 0 4px 4px 4px rgba(0, 0, 0, 0.25);
 
-  filter: drop-shadow(0.1rem .05rem 0.5rem black);
-  `;
+	line-height: 140%;
+`;

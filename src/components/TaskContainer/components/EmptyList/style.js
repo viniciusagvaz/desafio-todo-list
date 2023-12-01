@@ -8,9 +8,9 @@ export const EmptyList = styled.div`
 
 	width: 736px;
 
-	padding: 4.5rem 1.5rem;
+	padding: 4rem 1.5rem;
 
-	margin: 2rem auto 0;
+	margin: 1rem auto 0;
 
 	border-top: 1px solid ${props => props.theme["gray-400"]};
 	border-radius: 8px;
