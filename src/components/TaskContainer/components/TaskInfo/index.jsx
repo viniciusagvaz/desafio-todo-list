@@ -8,10 +8,8 @@ export function TaskInfo() {
 			</S.CreatedTasks>
 
 			<S.CompletedTaks>
-				Concluídas 
-        <S.QuantityTasks>
-         0
-        </S.QuantityTasks>
+				Concluídas
+				<S.QuantityTasks>1 de 2</S.QuantityTasks>
 			</S.CompletedTaks>
 		</S.TaskInfoContainer>
 	);

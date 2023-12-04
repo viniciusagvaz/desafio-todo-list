@@ -11,6 +11,7 @@ const TaskStatus = styled.p`
 	display: flex;
 	align-items: center;
 	gap: 8px;
+	line-height: 110%;
 
 	font-weight: bold;
 	font-size: 0.875rem;

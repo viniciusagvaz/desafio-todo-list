@@ -19,6 +19,7 @@ textarea,
 button {
   font-family: "Inter", sans-serif;
   font-size: 1rem;
+  line-height: 140%;
 }
 
 :focus {
