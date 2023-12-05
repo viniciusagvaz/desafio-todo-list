@@ -29,7 +29,7 @@ export const TaskCard = styled.label`
 `;
 
 export const Task = styled.p`
-	max-width: 632px;
+	width: 632px;
 	font-size: 0.875rem;
 	font-weight: 300;
 `;

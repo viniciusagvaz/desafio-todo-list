@@ -27,7 +27,7 @@ export const CompletedTaks = styled(TaskStatus)`
 	color: ${props => props.theme["white"]};
 `;
 
-export const QuantityTasks = styled.p`
+export const QuantityTasks = styled.span`
 	font-size: 0.75rem;
 	text-align: center;
 	text-shadow: none;
