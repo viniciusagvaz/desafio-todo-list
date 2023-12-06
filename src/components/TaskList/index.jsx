@@ -1,13 +1,13 @@
 import * as S from "./style";
 import { Trash } from "@phosphor-icons/react";
 
-export function TaskList() {
+export function TaskList({ id, taskContent }) {
 	return (
 		<S.TasksContainer>
-			<S.TaskCard>
+			<S.TaskCard key={id}>
 				<S.Checkbox type="checkbox" />
 
-				<S.Task>{"placeholder"}</S.Task>
+				<S.Task>{taskContent}</S.Task>
 
 				<S.Button>
 					<Trash
@@ -20,8 +20,14 @@ export function TaskList() {
 		</S.TasksContainer>
 	);
 }
-{
-	/* <S.TaskCard>
+
+// {
+//   tasks.map((id, task) => {
+//   return (TaskList(task))
+//   })}
+
+// {
+/* <S.TaskCard>
   <S.Checkbox type="checkbox" />
 
   <S.Task>{taskList}</S.Task>
@@ -51,4 +57,3 @@ export function TaskList() {
     />
   </S.Button>
 </S.TaskCard> */
-}
