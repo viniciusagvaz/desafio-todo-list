@@ -1,5 +1,11 @@
 import styled from "styled-components";
 
+export const RenderContainer = styled.div`
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+`;
+
 export const InputConteiner = styled.div`
 	width: 46rem;
 	display: flex;

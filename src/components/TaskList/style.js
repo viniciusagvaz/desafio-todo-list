@@ -4,16 +4,14 @@ export const TasksContainer = styled.div`
 	max-width: 736px;
 	width: 100%;
 
-	margin: 1.5rem auto 0;
-
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	margin: 1.5rem auto 0;
 	justify-content: center;
 
 	gap: 0.75rem;
 `;
-
 export const TaskCard = styled.label`
 	display: flex;
 	align-items: baseline;

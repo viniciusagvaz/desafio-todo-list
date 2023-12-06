@@ -5,6 +5,8 @@ export const TaskInfoContainer = styled.div`
 	height: 1.187rem;
 	display: flex;
 	justify-content: space-between;
+
+	margin: 5rem auto 0;
 `;
 
 const TaskStatus = styled.p`

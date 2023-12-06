@@ -1,9 +1,8 @@
 import { PlusCircle } from "@phosphor-icons/react";
-
 import * as S from "./style";
 import { useState } from "react";
 
-export function TodoInput() {
+export function TaskInput() {
 	const [tasks, setTasks] = useState([]);
 	const [newTask, setNewTask] = useState("");
 
@@ -16,8 +15,15 @@ export function TodoInput() {
 	const handleSubmitTask = e => {
 		e.preventDefault();
 
-		setTasks([...tasks, newTask]);
+		setTasks(old => [
+			...old,
+			{
+				id: Math.random().toFixed(3) * 1000,
+				taskContent: newTask.toString(),
+			},
+		]);
 		setNewTask("");
+		console.log(tasks);
 	};
 
 	return (
@@ -29,7 +35,6 @@ export function TodoInput() {
 				value={newTask}
 				required
 			/>
-
 			<S.Button onClick={handleSubmitTask}>
 				Criar
 				<PlusCircle size={16} />

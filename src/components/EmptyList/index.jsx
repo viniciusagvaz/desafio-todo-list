@@ -1,5 +1,5 @@
 import * as S from "./style";
-import clipboard from "../../../../assets/imgs/clipboard.svg";
+import clipboard from "../../assets/imgs/clipboard.svg";
 
 export function EmptyList() {
 	return (
