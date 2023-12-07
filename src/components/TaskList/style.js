@@ -7,27 +7,39 @@ export const TasksContainer = styled.div`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	margin: 1.5rem auto 0;
+	margin: 1rem auto 0;
 	justify-content: center;
 
 	gap: 0.75rem;
 `;
+
 export const TaskCard = styled.label`
 	display: flex;
 	align-items: baseline;
-	justify-content: space-evenly;
-	border-radius: 8px;
-	padding: 1rem;
+	justify-content: center;
 	gap: 1rem;
+
+	padding: 1rem;
+	width: 46rem;
+
+	border-radius: 8px;
+	border: 1px solid ${props => props.theme["gray-400"]};
 
 	font-size: 0.875rem;
 	background-color: ${props => props.theme["gray-500"]};
 	color: ${props => props.theme["gray-200"]};
-	border: 1px solid ${props => props.theme["gray-400"]};
+
+	span {
+		position: absolute;
+		left: 2.05rem;
+		bottom: 1.05rem;
+	}
 `;
 
 export const Task = styled.p`
-	width: 632px;
+	max-width: 632px;
+	word-wrap: break-word;
+	width: 100%;
 	font-size: 0.875rem;
 	font-weight: 300;
 `;

@@ -1,11 +1,14 @@
 import * as S from "./style";
 import { Trash } from "@phosphor-icons/react";
 
-export function TaskList({ id, taskContent }) {
+export function TaskList({ id, taskContent, deleteTask, checkTask }) {
 	return (
 		<S.TasksContainer>
 			<S.TaskCard key={id}>
-				<S.Checkbox type="checkbox" />
+				<S.Checkbox
+					type="checkbox"
+					onClick={checkTask}
+				/>
 
 				<S.Task>{taskContent}</S.Task>
 
@@ -14,6 +17,7 @@ export function TaskList({ id, taskContent }) {
 						size={14}
 						color="#808080"
 						weight="bold"
+						onClick={deleteTask}
 					/>
 				</S.Button>
 			</S.TaskCard>

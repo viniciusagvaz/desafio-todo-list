@@ -6,7 +6,7 @@ export const TaskInfoContainer = styled.div`
 	display: flex;
 	justify-content: space-between;
 
-	margin: 5rem auto 0;
+	margin: 5rem auto 1.5rem;
 `;
 
 const TaskStatus = styled.p`
@@ -31,11 +31,10 @@ export const CompletedTaks = styled(TaskStatus)`
 
 export const QuantityTasks = styled.span`
 	font-size: 0.75rem;
-	text-align: center;
 	text-shadow: none;
 
 	padding: 0.125rem 0.5rem;
-	border-radius: 999px;
+	border-radius: 62rem;
 
 	color: ${props => props.theme["gray-200"]};
 	background-color: ${props => props.theme["gray-400"]};

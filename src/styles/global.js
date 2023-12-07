@@ -20,10 +20,10 @@ button {
   font-family: "Inter", sans-serif;
   font-size: 1rem;
   line-height: 140%;
+
 }
 
 :focus {
     outline: none;
-    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.5);
   }
 `;

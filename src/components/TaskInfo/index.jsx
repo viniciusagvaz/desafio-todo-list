@@ -1,6 +1,6 @@
 import * as S from "./style";
 
-export function TaskInfo({taskQuantity, tasksDone, tasksTotal}) {
+export function TaskInfo({ taskQuantity, tasksDone, tasksTotal }) {
 	return (
 		<S.TaskInfoContainer>
 			<S.CreatedTasks>
@@ -9,7 +9,9 @@ export function TaskInfo({taskQuantity, tasksDone, tasksTotal}) {
 
 			<S.CompletedTaks>
 				Concluídas
-				<S.QuantityTasks>{tasksDone} de {tasksTotal}</S.QuantityTasks>
+				<S.QuantityTasks>
+					{tasksDone} de {tasksTotal}
+				</S.QuantityTasks>
 			</S.CompletedTaks>
 		</S.TaskInfoContainer>
 	);

@@ -18,12 +18,18 @@ export function App() {
 
 	const handleNewTask = e => {
 		e.preventDefault();
+		const task = e.target.value;
 
-		setNewTask(e.target.value);
+		setNewTask(task);
+		console.log(task);
 	};
 
 	const handleSubmitTask = e => {
 		e.preventDefault();
+
+		if (!newTask) {
+			return;
+		}
 
 		setTasks(old => [
 			...old,
@@ -35,13 +41,25 @@ export function App() {
 		setNewTask("");
 	};
 
+	const handleDeleteTask = id => {
+		setTasks(tasks.filter(task => task.id !== id));
+	};
+
+	const handleCheckTask = id => {
+		console.log("check");
+	};
+
 	return (
 		<ThemeProvider theme={defaultTheme}>
 			<Header />
-			<TaskInfo   taskQuantity={tasks.length} tasksDone={0} tasksTotal={0}/>
+			<TaskInfo
+				taskQuantity={tasks.length}
+				tasksDone={0}
+				tasksTotal={0}
+			/>
 
-			<TaskInput 
-        handleNewTask={handleNewTask}
+			<TaskInput
+				handleNewTask={handleNewTask}
 				newTask={newTask}
 				handleSubmitTask={handleSubmitTask}
 			/>
@@ -54,24 +72,12 @@ export function App() {
 							key={task.id}
 							id={task.id}
 							taskContent={task.content}
+							deleteTask={() => handleDeleteTask(task.id)}
+							checkTask={() => handleCheckTask()}
 						/>
 					);
 				})}
 
-			{/* {!tasks.length ? (
-				<EmptyList />
-			) : (
-				tasks.length &&
-				tasks.map(task => {
-					return (
-						<TaskList
-							key={task.id}
-							id={task.id}
-							taskContent={task.content}
-						/>
-					);
-				})
-			)} */}
 			<GlobalStyle />
 		</ThemeProvider>
 	);

@@ -9,15 +9,15 @@ export function TaskInput({ handleNewTask, newTask, handleSubmitTask }) {
 				placeholder="Adicione uma nova tarefa"
 				onChange={handleNewTask}
 				value={newTask}
-				minLength={2}
 				required
 			/>
 			<S.Button
 				onClick={handleSubmitTask}
 				type="submit"
+				disabled={!newTask}
 			>
 				Criar
-				<PlusCircle size={16} />
+				<PlusCircle size={19} />
 			</S.Button>
 		</S.InputConteiner>
 	);
